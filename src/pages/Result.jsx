@@ -16,6 +16,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import ReplayIcon from "@mui/icons-material/Replay";
 import ScoreIcon from "@mui/icons-material/Score";
+import EyeIcon from "@mui/icons-material/RemoveRedEye";
 import theme from "../theme";
 
 // Styled Components
@@ -74,6 +75,10 @@ const Result = () => {
 
   const handleRetry = () => {
     navigate("/dashboard");
+  };
+
+  const handleDetail = () => {
+    navigate("/my-result");
   };
 
   if (loading) return <Typography>Loading...</Typography>; // Handle loading state
@@ -143,6 +148,16 @@ const Result = () => {
               onClick={handleRetry}
             >
               Kembali ke Dashboard
+            </Button>
+          </Box>
+          <Box sx={{ mt: 4 }}>
+            <Button
+              variant="contained"
+              color="secondary"
+              startIcon={<EyeIcon />}
+              onClick={handleDetail}
+            >
+              Lihat Detail
             </Button>
           </Box>
 

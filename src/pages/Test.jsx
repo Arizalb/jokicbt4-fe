@@ -278,7 +278,7 @@ const Test = () => {
   const formattedQuestion = currentQuestion.question.replace(/\n/g, "<br />");
   const progressValue = ((currentQuestionIndex + 1) / questions.length) * 100;
   const formattedOptions = {};
-  ["A", "B", "C", "D", "E"].forEach((option) => {
+  ["A", "B", "C", "D"].forEach((option) => {
     if (currentQuestion[`option${option}`]) {
       formattedOptions[option] = currentQuestion[`option${option}`].replace(
         /\n/g,
@@ -353,7 +353,7 @@ const Test = () => {
               }
             >
               {" "}
-              {["A", "B", "C", "D", "E"].map((option) => (
+              {["A", "B", "C", "D"].map((option) => (
                 <FormControlLabel
                   key={option}
                   value={option}
